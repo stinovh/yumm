@@ -13,4 +13,11 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require_tree ../../../vendor/assets/javascripts/.
 //= require_tree .
+
+
+$(function(){
+  $('.button-collapse').sideNav();
+  $('.parallax').parallax();
+});
