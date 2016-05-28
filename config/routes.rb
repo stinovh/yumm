@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :searches, only: [:create]
   resources :food_truck_festivals, only: [:index]
 
   root 'pages#home'

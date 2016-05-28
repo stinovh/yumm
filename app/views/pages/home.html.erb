@@ -6,8 +6,17 @@
       <h5 class="header col s12 light">Never Miss A Food Truck Festival Again...</h5>
     </div>
     <div class="row center">
-      <input type="date" class="datepicker">
-      <%= link_to "Find Food Truck Festivals", food_truck_festivals_path, class:"btn-large waves-effect waves-cyan base" %>
+      <%= simple_form_for @search do |f| %>
+        <div class="input-field col s8 offset-s2 m3 offset-m3">
+          <%= f.date_field :date, label: false, placeholder:"Enter Date", class:"datepicker" %>
+          <label for="date">Date</label>
+        </div>
+        <div class="col s12 m3">
+          <button class="btn-large waves-effect waves-cyan base" type="submit" name="action">
+            Explore
+          </button>
+        </div>
+      <% end %>
     </div>
     <br><br>
   </div>
