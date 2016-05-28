@@ -2,17 +2,16 @@
   <div class="row">
     <% @food_truck_festivals.each do |ftf| %>
       <div class="col s12 m4">
-        <div class="card">
+        <div class="card small">
           <div class="card-image waves-effect waves-block waves-light">
             <%= image_tag "background3.jpg", class:"activator" %>
+            <span class="card-title"><%= ftf.name %></span>
           </div>
           <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4"><%= ftf.name %><i class="material-icons right">more_vert</i></span>
-            <p><%= link_to "Visit Website", ftf.link, target: "_blank" %></p>
+            <p><%= ftf.address %></p>
           </div>
-          <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-            <p>Here is some more information about this product that is only revealed once clicked on.</p>
+          <div class="card-action">
+            <p><%= link_to "Visit Website", ftf.link, target: "_blank" %></p>
           </div>
         </div>
       </div>
